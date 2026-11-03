@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#edf0e9">
+  <meta name="description" content="Live · Create · Journey — 个人项目、技能与兴趣展示。">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="LCJ">
+  <title>Live · Create · Journey</title>
+
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/logo-circle.svg">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-circle.png">
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+
+<body>
+  <main class="app" id="app">
+    <!-- 主页：网站标题、介绍与左侧下方分类卡片 -->
+    <section
+      class="view home-view is-active"
+      id="view-home"
+      data-view="home"
+      aria-labelledby="site-title"
+      aria-hidden="false"
+    >
+      <header class="home-topbar">
+        <p class="home-kicker">
+          A personal collection
+          <span>作品 · 技能 · 日常</span>
+        </p>
+        <h1 class="site-name" id="site-title">
+          Live <span class="dot">·</span> Create <span class="dot">·</span> Journey
+        </h1>
+      </header>
+
+      <div class="home-main">
+        <div class="home-content">
+          <p class="home-intro">
+            在这里，收藏我持续 <strong>创造</strong>、学习与感受生活的痕迹。
+          </p>
+
+          <p class="card-region-label">Explore the collection</p>
+          <div class="cards" id="category-cards" aria-label="内容分类"></div>
+        </div>
+      </div>
+
+      <footer class="home-footer">
+        <div class="home-footer__meta">
+          <p id="site-footer">Selected works &amp; everyday inspiration</p>
+          <button class="install-button" id="install-app" type="button">
+            <span aria-hidden="true">↗</span> 安装到桌面
+          </button>
+        </div>
+        <p class="home-footer__scroll">Choose a card to begin</p>
+      </footer>
+    </section>
+    <!-- 各级详情视图由 JavaScript 根据 src/data.js 自动生成 -->
+  </main>
+
+  <div class="app-toast" id="app-toast" role="status" aria-live="polite" hidden>
+    <span class="toast-text"></span>
+    <button class="toast-action" type="button" hidden>撤销</button>
+  </div>
+
+  <dialog class="app-dialog" id="app-dialog" aria-label="内容编辑"></dialog>
+
+  <noscript>
+    <div class="no-script">此网站需要启用 JavaScript 才能浏览和编辑内容。</div>
+  </noscript>
+  <script src="src/data.js"></script>
+  <script src="src/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Live Create Journey circular space logo</title>
+  <desc id="desc">A circular deep-space badge with LCJ at the center, an orbital ring, a rocket, stars and a small ringed planet.</desc>
+  <defs>
+    <radialGradient id="space" cx="32%" cy="24%" r="86%">
+      <stop offset="0" stop-color="#3d7165"/>
+      <stop offset="0.42" stop-color="#173f43"/>
+      <stop offset="0.78" stop-color="#0b2731"/>
+      <stop offset="1" stop-color="#06151d"/>
+    </radialGradient>
+    <radialGradient id="nebula" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#6ea79a" stop-opacity="0.38"/>
+      <stop offset="1" stop-color="#6ea79a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="rocketBody" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffaf0"/>
+      <stop offset="1" stop-color="#d7d7c9"/>
+    </linearGradient>
+    <linearGradient id="flame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffd27b"/>
+      <stop offset="0.45" stop-color="#f39a62"/>
+      <stop offset="1" stop-color="#e45f58" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="outerCircle">
+      <circle cx="256" cy="256" r="247"/>
+    </clipPath>
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- The only outer contour is a circle; the corners remain transparent. -->
+  <circle cx="256" cy="256" r="247" fill="url(#space)" stroke="#f3eddb" stroke-width="4"/>
+
+  <g clip-path="url(#outerCircle)">
+    <circle cx="112" cy="105" r="158" fill="url(#nebula)"/>
+    <circle cx="416" cy="398" r="148" fill="url(#nebula)" opacity="0.55"/>
+
+    <!-- Stars -->
+    <g fill="#f7f2e5">
+      <circle cx="111" cy="177" r="2.1" opacity="0.9"/>
+      <circle cx="151" cy="116" r="1.3" opacity="0.7"/>
+      <circle cx="204" cy="74" r="1.8" opacity="0.82"/>
+      <circle cx="294" cy="94" r="1.2" opacity="0.68"/>
+      <circle cx="348" cy="80" r="2.2" opacity="0.9"/>
+      <circle cx="411" cy="145" r="1.4" opacity="0.75"/>
+      <circle cx="427" cy="223" r="2" opacity="0.84"/>
+      <circle cx="392" cy="348" r="1.4" opacity="0.75"/>
+      <circle cx="358" cy="420" r="2.1" opacity="0.9"/>
+      <circle cx="285" cy="442" r="1.2" opacity="0.7"/>
+      <circle cx="188" cy="430" r="1.8" opacity="0.82"/>
+      <circle cx="105" cy="397" r="1.3" opacity="0.7"/>
+      <circle cx="73" cy="292" r="2" opacity="0.86"/>
+      <circle cx="75" cy="224" r="1.1" opacity="0.65"/>
+    </g>
+
+    <g fill="#a9d0c3" filter="url(#softGlow)">
+      <circle cx="176" cy="92" r="1.5"/>
+      <circle cx="382" cy="112" r="1.7"/>
+      <circle cx="444" cy="293" r="1.4"/>
+      <circle cx="330" cy="445" r="1.5"/>
+      <circle cx="93" cy="342" r="1.4"/>
+    </g>
+
+    <!-- Four-point sparkles -->
+    <g fill="#f8f1dd" opacity="0.9">
+      <path d="M338 54 l2.2 7.2 7.2 2.2 -7.2 2.2 -2.2 7.2 -2.2 -7.2 -7.2 -2.2 7.2 -2.2z"/>
+      <path d="M454 200 l1.7 5.5 5.5 1.7 -5.5 1.7 -1.7 5.5 -1.7 -5.5 -5.5 -1.7 5.5 -1.7z" opacity="0.72"/>
+      <path d="M126 431 l1.8 6 6 1.8 -6 1.8 -1.8 6 -1.8 -6 -6 -1.8 6 -1.8z" opacity="0.72"/>
+    </g>
+
+    <!-- Distant galaxy and comet trails -->
+    <ellipse cx="133" cy="120" rx="52" ry="14" fill="none" stroke="#d8e9df" stroke-width="1.2" opacity="0.24" transform="rotate(-24 133 120)"/>
+    <path d="M68 244 C102 226 123 225 151 236" fill="none" stroke="#b9d8ce" stroke-width="1.4" stroke-linecap="round" opacity="0.38"/>
+
+    <!-- Small ringed planet -->
+    <g transform="translate(136 359) rotate(-22)">
+      <ellipse cx="0" cy="0" rx="34" ry="10" fill="none" stroke="#f0e6cd" stroke-width="2.4" opacity="0.72"/>
+      <circle cx="0" cy="0" r="15" fill="#8caf9f"/>
+      <circle cx="-4" cy="-4" r="4" fill="#a9cabb" opacity="0.78"/>
+      <circle cx="6" cy="5" r="2.2" fill="#547c72" opacity="0.72"/>
+      <path d="M-34 0 C-13 -7 15 -7 34 0" fill="none" stroke="#f0e6cd" stroke-width="2.2" opacity="0.85"/>
+    </g>
+  </g>
+
+  <!-- Central circular orbit -->
+  <circle cx="256" cy="256" r="143" fill="none" stroke="#f2ead6" stroke-width="2.6" stroke-dasharray="18 11" opacity="0.76"/>
+  <circle cx="256" cy="256" r="148" fill="none" stroke="#8bb4a7" stroke-width="0.9" opacity="0.32"/>
+  <ellipse cx="256" cy="256" rx="192" ry="116" fill="none" stroke="#b6d7cb" stroke-width="1.1" opacity="0.22" transform="rotate(-31 256 256)"/>
+
+  <!-- Rocket rides the circular orbit. -->
+  <g transform="translate(357 155) rotate(135)" filter="url(#softGlow)">
+    <path d="M0 34 C10 24 14 12 14 2 C14 -11 8 -24 0 -34 C-8 -24 -14 -11 -14 2 C-14 12 -10 24 0 34Z" fill="url(#rocketBody)" stroke="#f7f0df" stroke-width="1.2"/>
+    <path d="M-14 7 L-25 25 L-12 22Z" fill="#e4685e" stroke="#f7e7d7" stroke-width="0.8"/>
+    <path d="M14 7 L25 25 L12 22Z" fill="#e4685e" stroke="#f7e7d7" stroke-width="0.8"/>
+    <circle cx="0" cy="-5" r="7.2" fill="#1b4b55" stroke="#f3eddb" stroke-width="2"/>
+    <circle cx="-2" cy="-7" r="2.2" fill="#b9e0dc" opacity="0.8"/>
+    <path d="M-7 28 C-4 38 0 44 0 50 C0 44 4 38 7 28Z" fill="url(#flame)"/>
+  </g>
+
+  <!-- Central letters -->
+  <g fill="#f8f3e7" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif">
+    <text x="256" y="279" font-size="76" font-weight="700" letter-spacing="1.5">LCJ</text>
+  </g>
+  <g fill="#9cc5b8">
+    <circle cx="256" cy="307" r="3"/>
+  </g>
+</svg>
